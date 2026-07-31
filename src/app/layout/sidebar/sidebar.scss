@@ -1,116 +1,188 @@
-.sidebar {
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family:'Mulish',-apple-system,'Segoe UI',sans-serif;
+  background:#f4f7f9;
+  color:#1a3a48;
+  -webkit-font-smoothing:antialiased;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: -264px;
   width: 264px;
   height: 100vh;
-  background: linear-gradient(180deg, #009fdb, #0568ae);
+  background: linear-gradient(180deg,#009fdb,#0568ae);
   display: flex;
   flex-direction: column;
   color: #fff;
+  transition: left .3s ease;
+  z-index: 1000;
 }
 
-.sb-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 22px;
+.sidebar.open{
+  left: 0;
 }
 
-.sb-logo {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: #fff;
-  object-fit: contain;
-  padding: 3px;
+.sidebar.open{
+left:0;
 }
 
-.sb-brand h1 {
-  font-size: 15px;
-  font-weight: 900;
-  margin: 0;
+.sb-brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:22px 22px 20px;
 }
 
-.sub {
-  font-size: 10px;
-  letter-spacing: 2px;
-  margin-top: 4px;
-  opacity: .9;
+.sb-logo{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  object-fit:contain;
+  background:#fff;
+  padding:3px;
+  flex:none;
 }
 
-.sb-menu-label {
-  padding: 16px 24px;
-  font-size: 10px;
-  letter-spacing: 2px;
-  opacity: .8;
+.sb-brand h1{
+  margin:0;
+  color:#fff;
+  font-weight:900;
+  font-size:15px;
+  letter-spacing:.4px;
+  line-height:1.1;
 }
 
-.sb-nav {
-  display: flex;
-  flex-direction: column;
-  padding: 0 14px;
-  gap: 4px;
+.sub{
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  color:#d3eefb;
+  letter-spacing:1.5px;
+  margin-top:3px;
 }
 
-.sb-link {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-  padding: 14px;
-  border: none;
-  background: transparent;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: .2s;
-  text-align: left;
+.sb-menu-label{
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#d3eefb;
+  opacity:.8;
+  padding:14px 24px 8px;
 }
 
-.sb-link:hover {
-  background: rgba(255,255,255,.12);
+.sb-nav{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding:0 14px;
+  overflow-y:auto;
 }
 
-.sb-link.active {
-  background: #fff;
-  color: #0568ae;
+.sb-link{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:12px 14px;
+  border-radius:11px;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:#eaf7fd;
+  font-size:14px;
+  font-weight:700;
+  text-align:left;
+  cursor:pointer;
+  transition:.18s;
+  border-radius:12px;
 }
 
-.sb-link svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+.sb-link svg{
+  width:19px;
+  height:19px;
+  flex:none;
 }
 
-.sb-foot {
-  margin-top: auto;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-top: 1px solid rgba(255,255,255,.2);
+.sb-link:hover{
+  background:rgba(255,255,255,.16);
+  color:#fff;
 }
 
-.ava {
+.sb-link.active{
+  background:#fff;
+  color:#0568ae;
+  box-shadow:0 6px 16px -8px rgba(0,42,58,.4);
+}
+
+.sb-foot{
+  margin-top:auto;
+  padding:16px 20px;
+  border-top:1px solid rgba(255,255,255,.22);
+  display:flex;
+  align-items:center;
+  text-align:left;
+  gap:11px;
+}
+
+.ava{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#fff;
+  color:#009fdb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:13px;
+  place-items:center;
+
+}
+
+.who{
+  font-size:13px;
+  font-weight:700;
+  color:#fff;
+  min-width:0;
+}
+
+.who small{
+  display:block;
+  font-size:11px;
+  font-weight:400;
+  color:#d3eefb;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.menu-btn {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background: #fff;
-  color: #0568ae;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
+
+  flex-shrink: 0;
 }
 
-.who {
-  font-weight: 700;
-}
-
-.who small {
+.menu-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+  color: #ffffff;
   display: block;
-  font-weight: 400;
-  opacity: .8;
 }
 
-.body{font-family:'Mulish',-apple-system,'Segoe UI',sans-serif;background:var(--paper);color:var(--text);-webkit-font-smoothing:antialiased}

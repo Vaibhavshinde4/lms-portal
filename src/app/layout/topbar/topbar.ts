@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-topbar',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './topbar.html',
-  styleUrl: './topbar.scss',
+  styleUrls: ['./topbar.scss']
 })
-export class Topbar {
+export class TopbarComponent {
+
+  @Output() toggleSidebar = new EventEmitter<void>();
+
+  searchText = '';
 
 }

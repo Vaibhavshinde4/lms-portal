@@ -1,0 +1,41 @@
+.notification-btn {
+  width: 56px;
+  height: 56px;
+
+  border: 1px solid #d8dde3;
+  border-radius: 16px;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  position: relative;
+
+  transition: all 0.2s ease;
+}
+
+.notification-btn:hover {
+  border-color: #c7d2da;
+  background: #fafafa;
+}
+
+.notification-btn svg {
+  width: 24px;
+  height: 24px;
+  color: #002f43;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+
+  width: 7px;
+  height: 7px;
+
+  background: #ef4444;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}

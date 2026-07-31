@@ -1,2 +1,4 @@
-<app-sidebar></app-sidebar>
+
+<app-sidebar [isOpen]="sidebarOpen"></app-sidebar>
+<app-topbar (toggleSidebar)="sidebarOpen = !sidebarOpen"></app-topbar>
 <router-outlet/>
