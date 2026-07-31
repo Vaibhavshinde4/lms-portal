@@ -1,0 +1,56 @@
+<div class="body">
+<aside class="sidebar">
+
+  <div class="sb-brand">
+    <img
+      class="sb-logo"
+      src="assets/images/att-logo.jpg"
+      alt="AT&T">
+
+    <div>
+      <h1>FIBER TRAINING</h1>
+      <div class="sub">FUTURE FIBER PORTAL</div>
+    </div>
+  </div>
+
+  <div class="sb-menu-label">
+    MENU
+  </div>
+
+  <nav class="sb-nav">
+
+    <button
+      *ngFor="let item of menuItems"
+      class="sb-link"
+      [class.active]="activeRoute === item.route"
+      (click)="setActive(item.route)">
+
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        [innerHTML]="item.icon">
+      </svg>
+
+      <span>{{ item.label }}</span>
+
+    </button>
+
+  </nav>
+
+  <div class="sb-foot">
+
+    <div class="ava">
+      DJ
+    </div>
+
+    <div class="who">
+      Dane Johnson
+      <small>Trainee</small>
+    </div>
+
+  </div>
+
+</aside>
+</div>
