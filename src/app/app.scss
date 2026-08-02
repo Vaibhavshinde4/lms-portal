@@ -1,33 +1,44 @@
 .main-layout{
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 .page-content{
-  margin-left:240px;
-  padding:24px;
-  background:#f4f7f9;
+  margin-left: 240px;
+  padding: 24px;
+  background: #f4f7f9;
 }
 
-.menu-btn-fixed {
+.menu-btn-fixed{
   position: fixed;
-  top: 22px; /* same position as screenshot */
+  top: 22px;
+  left: 20px;
   z-index: 9999;
 
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
 
   border: none;
-  border-radius: 12px;
-  background: #009fdb;
-  color: #ffffff;
-  cursor: pointer;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
-.menu-btn-fixed svg {
-  width: 24px;
-  height: 24px;
+.menu-btn-fixed svg{
+  width: 32px;
+  height: 32px;
+  stroke: #009fdb;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.menu-btn-fixed:hover,
+.menu-btn-fixed:focus{
+  background: transparent;
+  box-shadow: none;
+  outline: none;
 }
