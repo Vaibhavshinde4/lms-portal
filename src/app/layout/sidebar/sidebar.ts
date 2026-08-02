@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,9 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 export class SidebarComponent {
   @Input() isOpen = false;
-
+  @Output() toggleSidebar = new EventEmitter<void>();
   showHamburger = false;
-  activeRoute = 'dashboard';
+  activeRoute = '';
+
+  constructor(private router: Router) {}
 
   menuItems = [
     {
@@ -64,11 +67,15 @@ export class SidebarComponent {
     },
   ];
 
+  
   setActive(route: string): void {
     this.activeRoute = route;
+    this.router.navigate([route]);
   }
 
+  
+
   toggleMenu(): void {
-    this.isOpen = false;
+    this.toggleSidebar.emit();
   }
 }

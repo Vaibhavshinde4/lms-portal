@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class TopbarComponent {
 
-  @Output() toggleSidebar = new EventEmitter<void>();
 
   searchText = '';
 

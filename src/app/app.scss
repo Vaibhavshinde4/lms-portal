@@ -1,3 +1,33 @@
-.nav{
-  display: flex
+.main-layout{
+  min-height:100vh;
+}
+
+.page-content{
+  margin-left:240px;
+  padding:24px;
+  background:#f4f7f9;
+}
+
+.menu-btn-fixed {
+  position: fixed;
+  top: 22px; /* same position as screenshot */
+  z-index: 9999;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 12px;
+  background: #009fdb;
+  color: #ffffff;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn-fixed svg {
+  width: 24px;
+  height: 24px;
 }
