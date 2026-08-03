@@ -1,4 +1,27 @@
+<!-- Hamburger -->
+<button
+  class="menu-btn-fixed"
+  [style.display]="sidebarOpen ? 'none' : 'flex'"
+  (click)="toggleSidebar()">
+
+  <svg viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</button>
 
 <app-sidebar [isOpen]="sidebarOpen"></app-sidebar>
-<app-topbar (toggleSidebar)="sidebarOpen = !sidebarOpen"></app-topbar>
-<router-outlet/>
+
+<div class="main-layout">
+  <app-topbar></app-topbar>
+
+  <div class="page-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

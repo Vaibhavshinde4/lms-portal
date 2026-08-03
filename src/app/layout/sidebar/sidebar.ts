@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,9 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 export class SidebarComponent {
   @Input() isOpen = false;
-
+  @Output() toggleSidebar = new EventEmitter<void>();
   showHamburger = false;
-  activeRoute = 'dashboard';
+  activeRoute = '';
+
+  constructor(private router: Router) {}
 
   menuItems = [
     {
@@ -26,7 +29,7 @@ export class SidebarComponent {
     },
     {
       label: 'My Climb',
-      route: 'climb',
+      route: 'my-climb',
       icon: '<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5l-2 5-5 2 2-5z"/>',
     },
     {
@@ -44,17 +47,17 @@ export class SidebarComponent {
     },
     {
       label: 'Progress & Certification',
-      route: 'progress',
+      route: 'progress&certification',
       icon: '<path d="M12 14l4-4"/><path d="M4 18a8 8 0 1 1 16 0"/>',
     },
     {
       label: 'My Cohort',
-      route: 'cohort',
+      route: 'my-cohort',
       icon: '<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20a6 6 0 0 1 12 0"/>',
     },
     {
       label: 'My Instructors',
-      route: 'instructors',
+      route: 'my-instructors',
       icon: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
     },
     {
@@ -64,11 +67,14 @@ export class SidebarComponent {
     },
   ];
 
+  
   setActive(route: string): void {
     this.activeRoute = route;
+    this.router.navigate([route]);
   }
 
+
   toggleMenu(): void {
-    this.isOpen = false;
+    this.toggleSidebar.emit();
   }
 }

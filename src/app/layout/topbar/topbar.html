@@ -1,15 +1,5 @@
 <div class="topbar">
 
-  <!-- Hamburger -->
-  <button class="menu-btn" (click)="toggleSidebar.emit()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </button>
-
   <!-- Search -->
   <div class="search">
     <svg
@@ -18,8 +8,10 @@
       fill="none"
       stroke="currentColor"
       stroke-width="2">
+
       <circle cx="11" cy="11" r="7"></circle>
       <path d="M20 20l-3.5-3.5"></path>
+
     </svg>
 
     <input
@@ -29,15 +21,28 @@
   </div>
 
   <!-- Notification -->
-  <button class="icon-btn">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  <button
+    class="icon-btn"
+    (click)="showNotification = !showNotification">
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
       stroke-width="2">
-      <path
-        d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9">
-      </path>
+
+      <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
       <path d="M13.73 21a2 2 0 01-3.46 0"></path>
+
     </svg>
+
     <span class="badge"></span>
+
   </button>
+
+  <!-- Notification Component -->
+  <app-notification
+    *ngIf="showNotification">
+  </app-notification>
 
 </div>

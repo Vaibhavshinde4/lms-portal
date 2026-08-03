@@ -1,41 +1,89 @@
-.notification-btn {
-  width: 56px;
-  height: 56px;
-
-  border: 1px solid #d8dde3;
-  border-radius: 16px;
-  background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-  position: relative;
-
-  transition: all 0.2s ease;
+.notification-panel{
+  position: fixed;
+  top: 59px;      /* below topbar */
+  right: 328px;    /* move LEFT of bell */
+  width: 300px;
+  background: #fff;
+  border: 1px solid #d9e0e6;
+  border-radius: 24px;
+  overflow: hidden;
+  z-index: 9999;
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+  
 }
 
-.notification-btn:hover {
-  border-color: #c7d2da;
-  background: #fafafa;
+.notification-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 13px 16px;
+  border-bottom:1px solid #eef2f5;
+  font-family: 'Mulish', -apple-system, 'Segoe UI', sans-serif;
 }
 
-.notification-btn svg {
-  width: 24px;
-  height: 24px;
-  color: #002f43;
+.notification-header h3{
+  margin:0;
+  font-size:18px;
+  font-weight:700;
+  color:#0f3347;
 }
 
-.notification-dot {
-  position: absolute;
-  top: 14px;
-  right: 15px;
+.notification-header span{
+  font-size:12px;
+  font-weight:700;
+  color:#7b8b99;
+}
 
-  width: 7px;
-  height: 7px;
+.notification-item{
+  display:flex;
+  gap:11px;
+  padding:10px 12px;
+  border-bottom:1px solid #eef2f5;
+  font-family: 'Mulish', -apple-system, 'Segoe UI', sans-serif;
+}
 
-  background: #ef4444;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
+.notification-item:last-child{
+  border-bottom:none;
+}
+
+.notification-icon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+}
+
+.green{
+  background:#e7f3e5;
+}
+
+.blue{
+  background:#e7f4fc;
+}
+
+.light-blue{
+  background:#edf5fd;
+}
+
+.notification-content h4{
+  margin:0 0 4px;
+  font-size:12.5px;
+  font-weight:700;
+  color:#10364b;
+}
+
+.notification-content p{
+  margin:0 0 4px;
+  font-size:11px;
+  color:#758696;
+}
+
+.notification-content small{
+  font-size:9px;
+  color:#8a98a5;
 }

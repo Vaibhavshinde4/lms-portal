@@ -18,22 +18,20 @@ body{
   top: 0;
   left: -264px;
   width: 264px;
+  margin: auto;
   height: 100vh;
   background: linear-gradient(180deg,#009fdb,#0568ae);
   display: flex;
   flex-direction: column;
   color: #fff;
   transition: left .3s ease;
-  z-index: 1000;
+  z-index: 0;
 }
 
 .sidebar.open{
-  left: 0;
+  left: 0px;
 }
 
-.sidebar.open{
-left:0;
-}
 
 .sb-brand{
   display:flex;
@@ -81,7 +79,7 @@ left:0;
 .sb-nav{
   display:flex;
   flex-direction:column;
-  gap:6px;
+  gap:3px;
   padding:0 14px;
   overflow-y:auto;
 }
@@ -164,25 +162,13 @@ left:0;
   text-overflow:ellipsis;
 }
 
-.menu-btn {
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
+.menu-btn{
+    position: relative;
+    top: auto;
 }
 
-.menu-btn svg {
-  width: 24px;
-  height: 24px;
-  stroke: #ffffff;
-  color: #ffffff;
-  display: block;
+.menu-btn svg{
+  width:24px;
+  height:24px;
 }
 
