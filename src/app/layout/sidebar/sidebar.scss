@@ -100,13 +100,16 @@ body{
   text-align:left;
   cursor:pointer;
   transition:.18s;
-  border-radius:12px;
+  border-radius:11px;
+  font-family:inherit;
 }
 
 .sb-link svg{
   width:19px;
   height:19px;
   flex:none;
+  stroke-width:2px;
+  stroke: #1a3a48
 }
 
 .sb-link:hover{
