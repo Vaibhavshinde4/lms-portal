@@ -1,0 +1,74 @@
+<div class="topbar">
+  <!-- Search -->
+  <div class="search">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="7"></circle>
+      <path d="M20 20l-3.5-3.5"></path>
+    </svg>
+
+    <input type="text" [(ngModel)]="searchText" placeholder="SEARCH MODULES..." />
+  </div>
+
+  <!-- Notification -->
+  <button class="icon-btn" (click)="showNotification = !showNotification">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
+      <path d="M13.73 21a2 2 0 01-3.46 0"></path>
+    </svg>
+
+    <span class="badge"></span>
+  </button>
+
+  <!-- Notification Component -->
+  <app-notification *ngIf="showNotification"> </app-notification>
+
+  <!-- DJ Avatar -->
+<div class="user-avatar" (click)="showProfile = true">
+  DJ
+</div>
+
+<!-- Profile Modal -->
+<div class="profile-overlay" *ngIf="showProfile" (click)="showProfile = false">
+
+  <div class="profile-modal" (click)="$event.stopPropagation()">
+
+    <button class="close-btn" (click)="showProfile = false">✕</button>
+
+    <div class="profile-header">
+      <div class="profile-avatar">DJ</div>
+
+      <div class="profile-info">
+        <span class="role">TRAINEE</span>
+        <h2>Dane Johnson</h2>
+        <p>New hire • Started Jul 2026 • Premises South • Dallas, TX</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section">
+      <h4>ABOUT</h4>
+      <p>
+        Career-changer from residential electrical. Loves a clean cable run
+        and getting a customer online on the first try.
+      </p>
+    </div>
+
+    <div class="section">
+      <h4>FUN FACTS</h4>
+
+      <div class="chips">
+        <span>Ran a 10K last spring</span>
+        <span>Makes the best brisket</span>
+        <span>Learning Spanish</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h4>CONTACT</h4>
+      dane.johnson@att.com
+        dane.johnson@att.com
+    </div>
+
+  </div>
+</div>

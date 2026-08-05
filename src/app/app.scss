@@ -1,0 +1,46 @@
+.main-layout{
+  min-height: 100vh;
+}
+
+.page-content{
+  margin-left: 264px;
+  padding: 26px 32px 60px;
+  background: #f5f7fa;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+.menu-btn-fixed{
+  position: fixed;
+  top: 22px;
+  left: 20px;
+  z-index: 9999;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-btn-fixed svg{
+  width: 32px;
+  height: 32px;
+  stroke: #009fdb;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.menu-btn-fixed:hover,
+.menu-btn-fixed:focus{
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
