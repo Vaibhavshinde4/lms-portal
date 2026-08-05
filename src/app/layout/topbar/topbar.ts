@@ -16,4 +16,5 @@ export class TopbarComponent {
   toggleNotifications() {
     this.showNotification = !this.showNotification;
   }
+  showProfile=false;
 }
