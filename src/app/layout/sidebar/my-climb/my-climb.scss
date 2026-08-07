@@ -58,7 +58,7 @@
 .ladder-card {
   margin-top: 0px;
   background: #fff;
-  border: 1px solid #d8dde3;
+  border: 1px solid #dce6ed;
   border-radius: 20px;
   padding: 22px 24px;
   overflow: visible;
@@ -89,7 +89,7 @@
 }
 
 .since {
-  margin-top: 4px;
+  margin-top: 0px;
   font-family: 'Space Mono', monospace;
   font-size: 12px;
   color: #7a919d;
@@ -110,7 +110,7 @@
 
 .ladder-wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-center;
   gap: 40px;
 }
 
@@ -161,7 +161,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -50px;
+  top: -62px;
   font-family: 'Space Mono', monospace;
   font-size: 8.5px;
   font-weight: 700;
@@ -206,19 +206,17 @@
 .climber {
   position: absolute;
   left: 50%;
-  bottom: 18px; /* Week 1 */
   width: 60px;
   height: 60px;
   transform: translateX(-50%);
   z-index: 2;
-  animation: climbWeek5 1.8s ease-out forwards;
+  transition: bottom 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .climber svg {
   width: 100%;
   height: 90%;
   padding: 15px 0px;
-  align-items: center;
 }
 
 /* Weeks */
@@ -227,15 +225,17 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  justify-content: space-between;
-  padding: 2px 0;
+  gap: 15px;
+  height: 360px;
+  position: relative;
 }
 
 .week {
   display: flex;
   align-items: center;
   gap: 14px;
+  position: absolute;
+  transform: translateY(100%);
 }
 
 .wk-ico {
@@ -274,20 +274,28 @@
 }
 
 .wk-ico svg {
-  width: 18px;
-  height: 18px;
+  width: 11px;
+  height: 11px;
 }
 
 .wk-name {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   font-size: 15px;
   font-weight: 700;
+  line-height: 1.1;
+
   color: #7490a0;
+
   font-family:
     'Mulish',
     -apple-system,
     'Segoe UI',
     sans-serif;
-  line-height: 1.1;
 }
 
 .week.done .wk-name {
@@ -310,21 +318,12 @@
 
 .wk-name small {
   display: block;
-  margin-top: 3px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   color: #9badb7;
 }
 
-@keyframes climbWeek5 {
-  from {
-    bottom: 18px;
-  }
 
-  to {
-    bottom: 206px; /* Week 5 */
-  }
-}
 .how-completion-panel {
   background: #ffffff;
   border: 1px solid #d9e1e8;
