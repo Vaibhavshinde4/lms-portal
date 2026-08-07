@@ -1,3 +1,43 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.main-content,
+.content,
+.page-content,
+.router-container{
+  overflow:visible !important;
+  height:auto !important;
+  min-height:auto !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+
+  font-family:
+    'Aleck Sans',
+    'AT&T Aleck Sans',
+    'Manrope',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+/* 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font everywhere */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
+}
 .page-title,
 .my-climb-title {
   margin: 0 0 12px;
@@ -6,7 +46,7 @@
   line-height: 1;
   letter-spacing: -2px;
   color: #002a3a;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
   position: relative;
   top: 20px;
 }
@@ -20,14 +60,15 @@
   color: #5d7783;
   position: relative;
   top: 18px;
-  font-family: 'Mulish', -apple-system, 'Segoe UI', sans-serif;
+  font-family:
+    'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .role-tag {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
   font-size: 11px;
   letter-spacing: 1.5px;
   padding: 5px 11px;
@@ -55,15 +96,23 @@
    MY CLIMB LADDER CARD
 ========================= */
 
-.ladder-card {
-  margin-top: 0px;
-  background: #fff;
-  border: 1px solid #dce6ed;
-  border-radius: 20px;
-  padding: 22px 24px;
-  overflow: visible;
-  display: inline-grid;
-  width: 57%
+.ladder-card{
+  flex:1;
+  width:auto;
+  min-width:0;
+
+  margin-top:0;
+  background:#fff;
+  border:1px solid #dce6ed;
+  border-radius:20px;
+  padding:22px 24px;
+  overflow:hidden;
+
+  display:block;
+
+  box-shadow:
+    0 1px 2px rgba(16,24,40,.04),
+    0 4px 14px rgba(16,24,40,.05);
 }
 
 .lc-head {
@@ -72,15 +121,12 @@
   align-items: flex-start;
   margin-bottom: 18px;
   font-family:
-    Mulish,
-    -apple-system,
-    'Segoe UI',
-    sans-serif;
+   'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .lc-head h3 {
   margin: 0;
-  font-family: monospace, 'Space Mono', monospace;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
   font-size: 13px;
   font-weight: 800;
   color: #5d7783;
@@ -90,7 +136,7 @@
 
 .since {
   margin-top: 0px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
   font-size: 12px;
   color: #7a919d;
 }
@@ -161,14 +207,15 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -62px;
-  font-family: 'Space Mono', monospace;
-  font-size: 8.5px;
+  top: -55px;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
+  font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.5px;
   color: #8a98a3;
   white-space: nowrap;
   transition: color 0.5s;
+  letter-spacing: 1px;
 }
 
 .summit svg {
@@ -221,13 +268,14 @@
 
 /* Weeks */
 
-.weeks {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  height: 360px;
-  position: relative;
+.weeks{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  height:360px;
+  position:relative;
 }
 
 .week {
@@ -251,21 +299,13 @@
 .week.done .wk-ico {
   background: #2ca01c;
   color: #fff;
-  font-family:
-    'Mulish',
-    -apple-system,
-    'Segoe UI',
-    sans-serif;
+  font-family:'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
 }
 
 .week.current .wk-ico {
   background: #d7effc;
   color: #009fdb;
-  font-family:
-    'Mulish',
-    -apple-system,
-    'Segoe UI',
-    sans-serif;
+  font-family:'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
 }
 
 .week.locked .wk-ico {
@@ -278,42 +318,33 @@
   height: 11px;
 }
 
-.wk-name {
-  flex: 1;
+.wk-name{
+  flex:1;
+  min-width:0;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.1;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.1;
 
-  color: #7490a0;
+  color:#7490a0;
+  font-family:'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
 
-  font-family:
-    'Mulish',
-    -apple-system,
-    'Segoe UI',
-    sans-serif;
+  word-break:normal;
+  overflow-wrap:break-word;
 }
 
 .week.done .wk-name {
   color: #002a3a;
-  font-family:
-    'Mulish',
-    -apple-system,
-    'Segoe UI',
-    sans-serif;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
 }
 
 .week.current .wk-name {
   color: #009fdb;
-  font-family:
-    'Mulish',
-    -apple-system,
-    'Segoe UI',
-    sans-serif;
+  font-family:'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
 }
 
 .wk-name small {
@@ -322,7 +353,6 @@
   font-weight: 500;
   color: #9badb7;
 }
-
 
 .how-completion-panel {
   background: #ffffff;
@@ -342,7 +372,7 @@
   font-weight: 800;
   color: #002a3a;
   letter-spacing: -1px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
 }
 
 .panel-title svg {
@@ -390,6 +420,7 @@
   font-weight: 800;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+
 }
 
 .pill.green {
@@ -424,4 +455,240 @@
 .modules-btn:hover {
   background: #0088bc;
   transform: translateY(-1px);
+}
+
+/* Wrapper for ladder + right side panels */
+.my-climb-layout{
+display:flex;
+align-items:flex-start;
+gap:24px;
+width:100%;
+overflow:visible;
+}
+
+/* Right panel */
+.panel{
+  background:#fff;
+  border:1px solid #dbe7f3;
+  border-radius:28px;
+  padding:22px 24px;
+
+  width:100%;
+  margin-left:0;
+
+  display:block;
+
+  box-sizing:border-box;
+
+  box-shadow:
+    0 1px 2px rgba(16,24,40,.04),
+    0 4px 14px rgba(16,24,40,.05);
+}
+
+.panel h4 {
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #002a3a;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
+}
+
+.panel h4 svg {
+  width: 24px;
+  height: 24px;
+  color: #009fdb;
+  flex-shrink: 0;
+}
+
+.panel p {
+  margin: 0;
+  color: #54657d;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 9.5px;
+  font-weight: 700;
+  font-family: 'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.pill.green {
+  background: rgba(44, 160, 28, 0.12);
+  color: #218015;
+}
+
+.pill.blue {
+  background: rgba(0, 159, 219, .12);;
+  color: #0568ae;
+}
+
+.pill.grey {
+  background: rgba(93, 119, 131, .12);
+  color: #5d7783;
+}
+
+.panel .btn {
+  margin-top: 22px;
+  background: #003da5;
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.panel .btn:hover {
+  background: #002d7a;
+}
+
+/* Mobile */
+@media (max-width: 1200px) {
+  .my-climb-layout {
+    flex-direction: column;
+  }
+}
+
+.right-panels{
+  width:420px;
+  min-width:420px;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.certification-panel{
+  background:linear-gradient(135deg,#f5f0fb,#faf7fe);
+}
+
+.certification-panel h4{
+ font-size: 16px;
+    font-weight: 800;
+    color: #002a3a;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.certification-panel h4 svg{
+  width:19px;
+  height:19px;
+  color:#00a8e0;
+}
+
+.cert-text{
+  margin-bottom:14px !important;
+}
+
+.cert-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  font-size:14px;
+  font-weight:600;
+  color:#002a3a;
+}
+
+.cert-list div{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.my-climb-title,
+.my-climb-subtitle{
+  max-width:1200px;
+}
+
+/* Single page scroll */
+:host{
+  display:block;
+  width:100%;
+}
+
+html,
+body{
+  overflow-x:hidden !important;
+  overflow-y:auto !important;
+}
+
+/* Angular content containers */
+app-my-climb,
+.main-content,
+.content,
+.page-content,
+.router-container{
+  width:100%;
+  height:auto !important;
+  min-height:auto !important;
+  overflow:visible !important;
+}
+
+/* Layout */
+.my-climb-layout{
+  display:flex;
+  align-items:flex-start;
+  gap:24px;
+  width:100%;
+}
+
+/* Left ladder card */
+.ladder-card{
+  flex:1 1 auto;
+  min-width:0;
+}
+
+/* Right side panels */
+.right-panels{
+  width:420px;
+  min-width:420px;
+  flex-shrink:0;
+
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* Remove any internal scrolling */
+.panel,
+.ladder-card,
+.right-panels{
+  overflow:visible !important;
+}
+
+/* Prevent horizontal page scrollbar */
+.weeks{
+  min-width:0;
+}
+
+.wk-name{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+
+@media (max-width:1200px){
+
+  .my-climb-layout{
+    flex-direction:column;
+  }
+
+  .right-panels{
+    width:100%;
+    min-width:100%;
+  }
+
 }

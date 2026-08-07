@@ -11,7 +11,7 @@ import { TopbarComponent } from './layout/topbar/topbar';
   styleUrl: './app.scss',
 })
 export class App {
-  sidebarOpen = false;
+  sidebarOpen = true;
   toggleSidebar(): void {
     this.sidebarOpen = !this.sidebarOpen;
   }

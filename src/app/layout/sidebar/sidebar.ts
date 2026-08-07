@@ -22,10 +22,10 @@ export class SidebarComponent {
       label: 'Dashboard',
       route: 'dashboard',
       icon: `
-      <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-      <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-      <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-      <rect x="14" y="14" width="7" height="7" rx="1"></rect>`,
+      <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+      <rect width="7" height="5" x="3" y="16" rx="1"></rect>`,
     },
     {
       label: 'My Climb',
@@ -33,12 +33,12 @@ export class SidebarComponent {
       icon: '<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5l-2 5-5 2 2-5z"/>',
     },
     {
-      label: 'Toolbelt',
+      label: 'Courses',
       route: 'toolbelt',
       icon: `
-<circle cx="12" cy="12" r="9"></circle>
-<path d="M14.5 9.5l-2 5-5 2 2-5z"></path>
-`,
+      <path d="M16 7h6v6"></path>
+      <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+      `,
     },
     {
       label: 'Schedule',
@@ -67,12 +67,10 @@ export class SidebarComponent {
     },
   ];
 
-  
   setActive(route: string): void {
     this.activeRoute = route;
     this.router.navigate([route]);
   }
-
 
   toggleMenu(): void {
     this.toggleSidebar.emit();

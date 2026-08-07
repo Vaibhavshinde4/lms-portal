@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyClimbService, MyClimbData } from './my-climbservice';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-my-climb',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './my-climb.html',
   styleUrls: ['./my-climb.scss'],
 })

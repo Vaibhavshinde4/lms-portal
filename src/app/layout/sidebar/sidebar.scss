@@ -2,6 +2,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+color: #3a4a57;
 }
 
 body{
@@ -14,13 +15,13 @@ body{
 }
 
 .sidebar{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: -264px;
   width: 264px;
   margin: auto;
   height: 100vh;
-  background: linear-gradient(180deg,#009fdb,#0568ae);
+  background: linear-gradient(180deg, #00a8e0, var(--att-blue-deep));
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -45,33 +46,35 @@ body{
   height:46px;
   border-radius:50%;
   object-fit:contain;
-  background:#fff;
+  background:transparent;
   padding:3px;
   flex:none;
 }
 
 .sb-brand h1{
   margin:0;
-  color:#fff;
+  color:#002a3a;
   font-weight:900;
-  font-size:15px;
-  letter-spacing:.4px;
-  line-height:1.1;
+  font-size:17px;
+  letter-spacing:-0.3px;
+  line-height:1.05;
+  font-family:'Aleck Sans', 'AT&T Aleck Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .sub{
   font-family:'Space Mono',monospace;
   font-size:10px;
-  color:#d3eefb;
+  color:#0568ae;
   letter-spacing:1.5px;
   margin-top:3px;
+  opacity:1;
 }
 
 .sb-menu-label{
   font-family:'Space Mono',monospace;
   font-size:10px;
   letter-spacing:2px;
-  color:#d3eefb;
+  color:#5a657c;
   opacity:.8;
   padding:14px 24px 8px;
 }
@@ -84,24 +87,26 @@ body{
   overflow-y:auto;
 }
 
-.sb-link{
-  width:100%;
-  display:flex;
-  align-items:center;
-  gap:13px;
-  padding:12px 14px;
-  border-radius:11px;
-  border:none;
-  outline:none;
-  background:transparent;
-  color:#eaf7fd;
-  font-size:14px;
-  font-weight:700;
-  text-align:left;
-  cursor:pointer;
-  transition:.18s;
-  border-radius:11px;
-  font-family:"Mulish", -apple-system, "Segoe UI", sans-serif;;
+.sb-link {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 14px 12px 20px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+
+  background: transparent;
+  color: #3a4a57;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+
+  transition: all 0.18s ease;
 }
 
 .sb-link svg{
@@ -109,18 +114,17 @@ body{
   height:19px;
   flex:none;
   stroke-width:2px;
-  stroke: #1a3a48
+  stroke: #8a99a8
 }
 
-.sb-link:hover{
-  background:rgba(255,255,255,.16);
-  color:#fff;
+.sb-link:hover:not(.active) {
+  background: rgba(234, 244, 251, 0.5);
 }
 
 .sb-link.active{
-  background:#fff;
-  color:#0568ae;
-  box-shadow:0 6px 16px -8px rgba(0,42,58,.4);
+  background:rgb(234,244,251);
+  stroke:#0568ae;
+  box-shadow:0 1px 2px rgba(16, 24, 40, .04), 0 6px 18px rgba(16, 24, 40, .05);
 }
 
 .sb-foot{
@@ -151,7 +155,7 @@ body{
 .who{
   font-size:13px;
   font-weight:700;
-  color:#fff;
+  color:#3a4a57;
   min-width:0;
 }
 
@@ -159,7 +163,7 @@ body{
   display:block;
   font-size:11px;
   font-weight:400;
-  color:#d3eefb;
+  color:#3a4a57;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
