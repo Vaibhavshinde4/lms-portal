@@ -1,8 +1,8 @@
 .notification-panel{
   position: fixed;
   top: 79px;      /* below topbar */
-  right: 328px;    /* move LEFT of bell */
-  width: 300px;
+  right:auto;    /* move LEFT of bell */
+  width: auto;
   background: #fff;
   border: 1px solid #d9e0e6;
   border-radius: 24px;

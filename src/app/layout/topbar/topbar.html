@@ -1,74 +1,118 @@
 <div class="topbar">
-  <!-- Search -->
+
   <div class="search">
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="11" cy="11" r="7"></circle>
       <path d="M20 20l-3.5-3.5"></path>
     </svg>
 
-    <input type="text" [(ngModel)]="searchText" placeholder="SEARCH MODULES..." />
+    <input
+      type="text"
+      [(ngModel)]="searchText"
+      placeholder="SEARCH MODULES..."
+    />
   </div>
 
-  <!-- Notification -->
-  <button class="icon-btn" (click)="showNotification = !showNotification">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
-      <path d="M13.73 21a2 2 0 01-3.46 0"></path>
+  <div class="right-tools">
+
+    <!-- Theme -->
+    <button
+  class="icon-btn"
+  (click)="toggleTheme()"
+>
+  @if (!isDarkTheme) {
+
+    <!-- Moon Icon -->
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M12 3a6.5 6.5 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
     </svg>
 
-    <span class="badge"></span>
-  </button>
+  } @else {
 
-  <!-- Notification Component -->
-  <app-notification *ngIf="showNotification"> </app-notification>
+    <!-- Sun Icon -->
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="5"></circle>
+      <path d="M12 1v2"></path>
+      <path d="M12 21v2"></path>
+      <path d="M4.22 4.22l1.42 1.42"></path>
+      <path d="M18.36 18.36l1.42 1.42"></path>
+      <path d="M1 12h2"></path>
+      <path d="M21 12h2"></path>
+      <path d="M4.22 19.78l1.42-1.42"></path>
+      <path d="M18.36 5.64l1.42-1.42"></path>
+    </svg>
 
-  <!-- DJ Avatar -->
-<div class="user-avatar" (click)="showProfile = true">
-  DJ
-</div>
+  }
+</button>
 
-<!-- Profile Modal -->
-<div class="profile-overlay" *ngIf="showProfile" (click)="showProfile = false">
+    <!-- Notification -->
+    <div class="notification-wrapper">
+      <button
+        class="icon-btn"
+        (click)="toggleNotifications()"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
 
-  <div class="profile-modal" (click)="$event.stopPropagation()">
+        <span class="badge"></span>
+      </button>
 
-    <button class="close-btn" (click)="showProfile = false">✕</button>
-
-    <div class="profile-header">
-      <div class="profile-avatar">DJ</div>
-
-      <div class="profile-info">
-        <span class="role">TRAINEE</span>
-        <h2>Dane Johnson</h2>
-        <p>New hire • Started Jul 2026 • Premises South • Dallas, TX</p>
-      </div>
+      @if(showNotification){
+        <app-notification></app-notification>
+      }
     </div>
 
-    <hr>
-
-    <div class="section">
-      <h4>ABOUT</h4>
-      <p>
-        Career-changer from residential electrical. Loves a clean cable run
-        and getting a customer online on the first try.
-      </p>
+    <!-- Avatar -->
+    <div
+      class="user-avatar"
+      (click)="showProfile=true"
+    >
     </div>
 
-    <div class="section">
-      <h4>FUN FACTS</h4>
+    <!-- User Switcher -->
+    <button
+      class="switcher-btn"
+      type="button"
+    >
+      <span class="switcher-dot"></span>
 
-      <div class="chips">
-        <span>Ran a 10K last spring</span>
-        <span>Makes the best brisket</span>
-        <span>Learning Spanish</span>
-      </div>
-    </div>
+      <span class="switcher-text">
+        Trainee
+      </span>
 
-    <div class="section">
-      <h4>CONTACT</h4>
-      dane.johnson@att.com
-        dane.johnson@att.com
-    </div>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <path d="m16 17 5-5-5-5"></path>
+        <path d="M21 12H9"></path>
+      </svg>
+    </button>
 
   </div>
+
 </div>

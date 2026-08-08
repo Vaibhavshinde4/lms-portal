@@ -1,7 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
-.body{
-    font: "Mulish",
-          "-apple-system",
-          "Segoe UI",
-          "sans-serif"
+/* DARK THEME */
+body.dark-theme {
+  --paper: #0e1622;
+  --text: #ffffff;
+  --text-soft: #cbd5e1;
+
+  --card-bg: #1a2433;
+  --card-border: #2b384d;
+}
+
+/* Page */
+body.dark-theme,
+body.dark-theme .main-layout,
+body.dark-theme .page-content {
+  background: #0e1622 !important;
+}
+
+/* Sidebar */
+body.dark-theme .sidebar,
+body.dark-theme .sb-brand {
+  background: #0e1622 !important;
+  border-color: #243244 !important;
+}
+
+/* Topbar */
+body.dark-theme .topbar {
+  background: #0e1622 !important;
+  border-bottom-color: #243244 !important;
+}
+
+/* Search Box */
+body.dark-theme .search input {
+  background: #1a2433;
+  border-color: #2b384d;
+  color: #ffffff;
+}
+
+body.dark-theme .search input::placeholder {
+  color: #94a3b8;
+}
+
+/* Cards */
+body.dark-theme .ladder-card,
+body.dark-theme .panel,
+body.dark-theme .how-completion-panel {
+  background: #1a2433 !important;
+  border-color: #2b384d !important;
+}
+
+/* Text */
+body.dark-theme .page-title,
+body.dark-theme .my-climb-title,
+body.dark-theme .panel-title,
+body.dark-theme .panel h4,
+body.dark-theme .wk-name,
+body.dark-theme .pct,
+body.dark-theme .sb-brand h1,
+body.dark-theme .who {
+  color: #ffffff !important;
+}
+
+body.dark-theme .page-subtitle,
+body.dark-theme .my-climb-subtitle,
+body.dark-theme .panel p,
+body.dark-theme .since,
+body.dark-theme small,
+body.dark-theme .sub,
+body.dark-theme .sb-menu-label {
+  color: #cbd5e1 !important;
+}
+
+/* Keep buttons WHITE */
+body.dark-theme .icon-btn,
+body.dark-theme .switcher-btn {
+  background: #ffffff !important;
+  border-color: #e4e9f0 !important;
+}
+
+body.dark-theme .icon-btn svg,
+body.dark-theme .switcher-btn svg,
+body.dark-theme .switcher-text {
+  color: #002a3a !important;
+  stroke: #002a3a !important;
+}
+
+body.dark-theme .role-tag {
+  background: #1a2433 !important;
+  border: 1px solid #2b384d !important;
 }
