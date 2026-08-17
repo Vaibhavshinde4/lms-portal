@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Notification } from '../notification/notification';
 import { CommonModule } from '@angular/common';
@@ -12,9 +12,34 @@ import { CommonModule } from '@angular/common';
 })
 export class TopbarComponent {
   searchText = '';
+
   showNotification = false;
-  toggleNotifications() {
+  showProfile = false;
+  isDarkTheme = false;
+
+  toggleNotifications(): void {
     this.showNotification = !this.showNotification;
   }
-  showProfile=false;
+
+  toggleTheme(): void {
+    this.isDarkTheme = !this.isDarkTheme;
+
+    if (this.isDarkTheme) {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+    }
+  }
+
+  closeProfile(): void {
+    this.showProfile = false;
+  }
+
+  openProfile(): void {
+    this.showProfile = true;
+  }
+
+  switchLogin(): void {
+    console.log('Switch Login Clicked');
+  }
 }

@@ -15,18 +15,21 @@ body{
 }
 
 .sidebar{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -264px;
-  width: 264px;
-  margin: auto;
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
   height: 100vh;
-  background: linear-gradient(180deg, #00a8e0, var(--att-blue-deep));
+  background: #EAF4FB;
   display: flex;
   flex-direction: column;
   color: #fff;
   transition: left .3s ease;
   z-index: 0;
+  border: 1px solid #e4e9f0;
+  box-sizing: border-box;
 }
 
 .sidebar.open{
@@ -39,6 +42,7 @@ body{
   align-items:center;
   gap:13px;
   padding:22px 22px 20px;
+  background: #EAF4FB
 }
 
 .sb-logo{
@@ -83,7 +87,7 @@ body{
   display:flex;
   flex-direction:column;
   gap:3px;
-  padding:0 14px;
+  padding:-1px 18px;
   overflow-y:auto;
 }
 
@@ -122,7 +126,7 @@ body{
 }
 
 .sb-link.active{
-  background:rgb(234,244,251);
+  background: #EAF4FB;
   stroke:#0568ae;
   box-shadow:0 1px 2px rgba(16, 24, 40, .04), 0 6px 18px rgba(16, 24, 40, .05);
 }
@@ -130,7 +134,7 @@ body{
 .sb-foot{
   margin-top:auto;
   padding:16px 20px;
-  border-top:1px solid rgba(255,255,255,.22);
+  border-top:1px solid #e4e9f0;
   display:flex;
   align-items:center;
   text-align:left;

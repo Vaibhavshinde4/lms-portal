@@ -16,7 +16,7 @@ export class MyClimbService {
 
   getMyClimb(): Observable<MyClimbData> {
     return of({
-      currentWeek: 3,          // Change this value to test
+      currentWeek: 5,          // Change this value to test
       totalWeeks: 8,
       // progressPercentage: 0
     });

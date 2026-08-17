@@ -1,21 +1,20 @@
 .main-layout {
-  margin-left: 260px; // sidebar width
+  margin-left: 250px;
   display: flex;
   flex-direction: column;
-  height: auto;
-  min-height: 100vh;
-  overflow: visible;
-  
+  min-height: auto;
+  height: fit-content;
 }
 
 .page-content {
-  flex: 1;
+  flex: 0 0 auto;
   overflow: visible;
-  padding: 26px 32px 60px;
-  background: #fff;
+  padding: 100px 32px 32px 12px;
+  background: #1a2433;
+  background-color: #eaf4fb;
 }
 
-.menu-btn-fixed{
+.menu-btn-fixed {
   position: fixed;
   top: 22px;
   left: 20px;
@@ -32,7 +31,7 @@
   cursor: pointer;
 }
 
-.menu-btn-fixed svg{
+.menu-btn-fixed svg {
   width: 32px;
   height: 32px;
   stroke: #5a657c;
@@ -41,7 +40,7 @@
 }
 
 .menu-btn-fixed:hover,
-.menu-btn-fixed:focus{
+.menu-btn-fixed:focus {
   background: transparent;
   box-shadow: none;
   outline: none;
@@ -76,4 +75,10 @@ body {
 *::after {
   box-sizing: border-box;
   font-family: inherit;
+}
+
+.scroll {
+  padding-left: max(32px, env(safe-area-inset-left));
+  padding-right: max(32px, env(safe-area-inset-right));
+  padding-bottom: max(60px, env(safe-area-inset-bottom));
 }
